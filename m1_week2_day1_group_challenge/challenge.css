@@ -1,0 +1,152 @@
+/* Reset Default Styles */
+* {
+	font-family: arial;
+	padding:0; 
+	margin:0;
+}
+
+/* Challenge Custom Styles */
+
+/* Use these colors for the challenge:
+
+header and footer background color - #babaff
+main background color - #f0f8ff
+global navigation background color - #00f
+footer navigation background color - #00f
+navigation hover color - #ff9600
+main heading font color - #001a63
+main font color - #707070
+
+*/
+
+/* Container */
+#container {
+	width:800px;
+	background-color:#fff;
+	margin: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+}
+
+/* Header */
+header {
+	height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+header, footer {
+	background-color: #babaff;
+}
+
+/* Main */
+main {
+	width: 75%;
+	padding:15px;
+	margin-bottom:5px;
+	float:left;
+  border-left:1px solid #f0f8ff;
+  border-right:1px solid #f0f8ff;
+  border-top: 1px solid #f0f8ff;
+}
+main h2 {
+	font:normal bold 16px #707070; 
+	margin:10px 0; 
+  color:#001a63;
+  font-size: 1.25rem;
+}
+
+/* Global Navigation */
+.globalNav {
+	float:left; 
+	width:20%; 
+	border:1px solid #00f; 
+	border-bottom:none; 
+}
+.globalNav ul {
+	list-style-type: none;
+  margin:0;
+  padding:0;
+}
+.globalNav ul li {
+	display: block;
+	border-bottom:1px solid #fff;
+}
+.globalNav ul a {
+  display: block; 
+	font:normal bold 14px; 
+	text-decoration:none; 
+  background-color: #00f;
+  color:#fff;
+  padding: 6px 10px;
+  font-weight: bold;
+}
+.globalNav ul a:hover {
+	background-color: #ff9600;
+}
+[src="images/gcimage.png"] {
+	float:right;
+	margin: 0 0 10px 10px;
+}
+
+/* Footer */
+footer {
+	clear:both;
+	background-color: #babaff;
+	padding: 10px 0;
+}
+footer p {
+	text-align: center;
+	color: #707070;
+	margin-top: 10px;
+	font-style: italic;
+  font-weight: bold;
+}
+.footerNav {
+	background:#00f;
+	padding: 5px 0;
+	text-align:center;
+}
+.footerNav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.footerNav li {
+	display: inline-block;
+	padding: 0 10px;
+	border-left:1px solid #fff;
+}
+.footerNav li:first-child {
+	border-left:none;
+}
+.footerNav a {
+	color:#fff; 
+	font:normal bold 14px Arial, sans-serif; 
+	text-decoration:none;
+}
+.footerNav a:hover {
+	color: #ff9600;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
