@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>My Third Web Page</title>
+    </head>
+    <body>
+    <!-- Container to wrap everything -->
+    <div id="container">
+
+        <!-- Brand of website -->
+        <header>Web-601-Week1-Day2-Demo</header>
+
+        <!-- Main navigation -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="page2.html">About</a></li>
+                <li>Gallery</li>
+                <li><a href="page3.html">Contact</a></li>
+            </ul>
+        </nav> <!-- End Main Navigation -->
+        <main>
+            <h1>My Third Heading</h1>
+            <p>My Third paragraph</p>
+            <img src="images/central_park.jpg" alt="Central Park Image" width="500">
+
+            <form action="/signup" method="post">
+            <fieldset>
+                <legend>User personal information</legend>
+                <label>Enter your full name</label><br>
+                <input type="text" name="first_name"><br>
+
+                <label>Enter your email</label><br>
+                <input type="email" name="email"><br>
+
+                <label>Enter your phone</label><br>
+                <input type="text" name="phone"><br>s
+
+                <br><label>Select your gender:</label><br>
+                <input type="radio" name="gender" value="male"> Male
+                <input type="radio" name="gender" value="female"> Female<br/>
+
+                <br><label>How should we contact you?</label><br>
+                <select>
+                    <option value="email">Email</option>
+                    <option value="phone">Phone</option>
+                </select><br>
+                <br>Tell us the reason of your visit today:<br>
+                <textarea name="reason" rows="5" cols="30"></textarea><br>
+                <input type="submit" value="sign-up">
+            </fieldset>
+            </form>
+        </main>
+    <footer>&copy; Copyright 2025 Shravan's Web-601-Week1-Day2-Demo</footer>
+
+    </div>
+    <!-- End Container -->
+</body>
+</html>
