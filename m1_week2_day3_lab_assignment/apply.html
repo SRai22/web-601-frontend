@@ -3,13 +3,21 @@
 <head>
   <meta charset="utf-8">
   <title>Adoption Application - Second Chance</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <img src="images/logo.jpeg" alt="Pet Adoption Logo" width="150">  
-  <h1>Second Chance Pet Adoption Center</h1>
-  <h2>Adoption Application</h2>
 
-  <p>Thank you for choosing to give a pet a second chance. Please review the information below and bring it with you when you visit the shelter.</p>
+  <nav class="main-nav">
+    <img src="images/logo.jpeg" alt="Pet Adoption Logo" width="80" style="vertical-align:middle; margin-right:1em;">
+    <a href="index.html">Home</a>
+    <a href="adoption.html">Adoption Steps</a>
+    <a href="apply.html">Apply to Adopt</a>
+  </nav>
+
+  <h1 class="shining">✨ Second Chance Pet Adoption Center ✨</h1>
+  <h2 class="shining">Adoption Application 🐾</h2>
+
+  <p class="shining-para">Thank you for choosing to give a pet a second chance! <span class="emoji">🌟</span> Please review the information below and bring it with you when you visit the shelter. <span class="emoji">🐶🐱</span></p>
 
   <h2>Application Overview</h2>
   <ul>
@@ -19,42 +27,39 @@
   </ul>
 
   <h2>Applicant Information</h2>
-  <form action="/contact" method="post">
+  <form action="/contact" method="post" class="fun-form">
     <fieldset>
-      <legend>Applicant Information</legend>
+      <legend><span class="emoji">📝</span> Applicant Information</legend>
 
-      <label for="full_name">Full name</label><br>
-      <input type="text" id="full_name" name="full_name" required><br><br>
+      <label for="full_name"><span class="emoji">👤</span> Full name</label>
+      <input type="text" id="full_name" name="full_name" required placeholder="e.g. Taylor Swift">
 
-      <label for="phone">Phone</label><br>
-      <input type="tel" id="phone" name="phone"><br><br>
+      <label for="phone"><span class="emoji">📞</span> Phone</label>
+      <input type="tel" id="phone" name="phone" placeholder="e.g. 555-123-4567">
 
-      <label for="email">Email</label><br>
-      <input type="email" id="email" name="email" required><br><br>
+      <label for="email"><span class="emoji">✉️</span> Email</label>
+      <input type="email" id="email" name="email" required placeholder="e.g. you@email.com">
 
-      <label for="address">Address</label><br>
-      <input type="text" id="address" name="address"><br><br>
+      <label for="address"><span class="emoji">🏠</span> Address</label>
+      <input type="text" id="address" name="address" placeholder="e.g. 123 Main St, City">
 
-      <label>Household & Pet History</label>
+      <label><span class="emoji">🏡</span> Household & Pet History</label>
 
-      <label>Do you own or rent?</label><br>
-      <label for="own"><input type="radio" id="own" name="own_or_rent" value="own" checked> Own</label>
-      <label for="rent"><input type="radio" id="rent" name="own_or_rent" value="rent"> Rent</label>
-      <label for="other"><input type="radio" id="other" name="own_or_rent" value="other"> Other</label>
-      <br><br>
+      <label>Do you own or rent?</label>
+      <label for="own"><input type="radio" id="own" name="own_or_rent" value="own" checked> Own <span class="emoji">🔑</span></label>
+      <label for="rent"><input type="radio" id="rent" name="own_or_rent" value="rent"> Rent <span class="emoji">🏢</span></label>
+      <label for="other"><input type="radio" id="other" name="own_or_rent" value="other"> Other <span class="emoji">❓</span></label>
 
-      <label for="current_pets">Current pets?</label><br>
+      <label for="current_pets"><span class="emoji">🐾</span> Current pets?</label>
       <textarea id="current_pets" name="current_pets" rows="3" cols="40" placeholder="List current pets, ages, breeds"></textarea>
-      <br><br>
 
-      <label for="vet_name">Veterinarian name</label><br>
-      <input type="text" id="vet_name" name="vet_name"><br><br>
+      <label for="vet_name"><span class="emoji">👩‍⚕️</span> Veterinarian name</label>
+      <input type="text" id="vet_name" name="vet_name" placeholder="e.g. Dr. Smith">
 
-      <label>Which type of pet are you applying for?</label>
-      <label for="pet_dog"><input type="radio" id="pet_dog" name="pet_type" value="dog" checked> Dog</label>
-      <label for="pet_cat"><input type="radio" id="pet_cat" name="pet_type" value="cat"> Cat</label>
-      <label for="pet_either"><input type="radio" id="pet_either" name="pet_type" value="either"> Either</label>
-      <br><br>
+      <label><span class="emoji">🐶🐱</span> Which type of pet are you applying for?</label>
+      <label for="pet_dog"><input type="radio" id="pet_dog" name="pet_type" value="dog" checked> Dog <span class="emoji">🐶</span></label>
+      <label for="pet_cat"><input type="radio" id="pet_cat" name="pet_type" value="cat"> Cat <span class="emoji">🐱</span></label>
+      <label for="pet_either"><input type="radio" id="pet_either" name="pet_type" value="either"> Either <span class="emoji">🐾</span></label>
 
       <input type="submit" value="Submit Application">
     </fieldset>
