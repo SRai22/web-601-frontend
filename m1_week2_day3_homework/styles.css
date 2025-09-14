@@ -347,3 +347,53 @@ form .button input[type="submit"] {
 form .button input[type="submit"]:hover {
     background-color: #3a5fb8;
 }
+
+/* Cliffs Page */
+.cliffs-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 20px;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 50px;
+}
+
+.cliff-section {
+    border: 1px solid #fff;
+    aspect-ratio: 16/9;
+}
+
+.cliff-header {
+    background-color: #852B1B;
+    color: #fff;
+    text-align: center;
+    padding: 8px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.cliff-image {
+    width: 100%;
+    height: calc(100% - 40px);
+    object-fit: cover;
+    display: block;
+}
+
+/* Specific styling for each cliff */
+.west-cliff .cliff-header {
+    background-color: #852B1B;
+}
+
+.north-cliff .cliff-header {
+    background-color: #852B1B;
+}
+
+.east-cliff .cliff-header {
+    background-color: #852B1B;
+}
+
+.south-cliff .cliff-header {
+    background-color: #852B1B;
+}

@@ -3,6 +3,9 @@
 ## Project Output
 ![Project Output](./images/outputs/output.png)
 
+## Cliffs page 
+![Cliffs Page](./images/outputs/cliffs-output.png)
+
 ## Activities page
 ![Activities Page](./images/outputs/actvities-page.png)
 
