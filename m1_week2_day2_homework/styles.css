@@ -7,15 +7,15 @@ header {
 
 #home header {
     background: no-repeat url(images/cliff_ocean.jpg);
-    background-size: 1500px;
+    background-size: cover;
 }
 #activities header {
     background: no-repeat lightgrey url(images/runfly.jpg);
-    background-size: 1500px;
+    background-size: cover;
 }
 #contact header {
     background: no-repeat lightgrey url(images/cliff_rock.jpg);
-    background-size: 1500px;
+    background-size: cover;
 }
 /* Main Header */
 .main-header {
@@ -66,6 +66,7 @@ main {
 }
 main h2 {
     color: #9ed034;
+    font-size: 32px;
 }
 /* Partners Section */
 section {
@@ -174,4 +175,170 @@ th:first-child {
 td:first-child {
     font-weight: bold;
     background: #BDE1FF;
+}
+
+#contact body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff;
+}
+
+#contact main h1 {
+    color: #9ed034;
+}
+
+#contact main p {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+.contactinfo {
+    margin-bottom: 30px;
+}
+
+.contactinfo div {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.contactinfo span:first-child {
+    font-weight: bold;
+    color: #333;
+}
+
+.contactinfo span:last-child {
+    color: #666;
+    margin-left: 5px;
+}
+
+fieldset {
+    border: 1px solid #9ed034;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #fefefe;
+    margin-bottom: 20px;
+}
+legend {
+    color: #4977D1;
+    font-weight: bold;
+    padding: 0 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.textbox {
+    margin-bottom: 20px;
+    padding-left: 1em;
+}
+
+.textbox label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #000;
+    font-size: 14px;
+}
+
+.textbox label:first-child {
+    margin-top: 5px;
+}
+
+.textbox input {
+    width: 50%;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+    background-color: white;
+}
+
+.radios {
+    margin-bottom: 20px;
+    padding-left: 1em;
+}
+
+.radios label:first-child {
+    font-weight: bold;
+    color: #000;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.radios input[type="radio"] {
+    margin-right: 5px;
+    margin-left: 15px;
+}
+
+/* Pseudo-class */
+.radios input[type="radio"]:first-of-type {
+    margin-left: 0;
+}
+
+.selectmenu {
+    margin-bottom: 20px;
+    padding-left: 1em;
+    display: flex;
+    align-items: center;
+}
+
+.selectmenu label {
+    margin-right: 15px;
+    margin-bottom: 0;
+    font-weight: bold;
+    color: #333;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.selectmenu select {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+    background-color: white;
+    min-width: 200px;
+}
+
+.commentbox {
+    margin-bottom: 20px;
+    padding-left: 1em;
+}
+
+.commentbox label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #000;
+    font-size: 14px;
+}
+
+.commentbox textarea {
+    width: 50%;
+    height: 120px;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    resize: vertical;
+    background-color: white;
+}
+
+.button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+form .button input[type="submit"] {
+    background-color: #4977D1;
+    color: #fff;
+    padding: 10px 30px;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Pseudo-class selector */
+form .button input[type="submit"]:hover {
+    background-color: #3a5fb8;
 }
