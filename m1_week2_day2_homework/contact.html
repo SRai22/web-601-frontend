@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Great Cliffs of California</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="images/cliff_ocean.jpg" alt="Cliff by the Ocean" width="1280" height="564">
+            <div class="main-header">
+                <div class="logo">
+                    <img src="images/logo.png" alt="Great Cliffs Logo" width="125">
+                </div>
+                <nav class="main-menu">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">Cliffs</a></li>
+                        <li><a href="activities.html">Activities</a></li>
+                        <li class="active"><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <h1>Contacting Us</h1>
+            <p> If you need more information about the Cliffs, Hours of Operations, Facilities or questions about this site, please contact us by using one of the following:</p>
+            <h2>Phone:</h2>
+            <p>(800)GCLIFFS</p>
+            <h2>Email:</h2>
+            <p>info@greatcliffs.com</p>
+
+            <h2>Fill Out This Form:</h2>
+            <form action="/contact" method="post">
+            <fieldset>
+                <legend>Contact Form</legend>
+                <label for="name">Enter your full name</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="email">Enter your email</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="phone">Enter your phone</label><br>
+                <input type="tel" id="phone" name="phone"><br><br>
+
+                <fieldset>
+                    <legend>How should we contact you?</legend>
+                    <label for="contact_email"><input type="radio" id="contact_email" name="contact_method" value="email" checked> Email</label>
+                    <label for="contact_phone"><input type="radio" id="contact_phone" name="contact_method" value="phone"> Phone</label>
+                </fieldset>
+                <br>
+
+                <label for="cliff">Which Cliff are you inquiring?</label><br>
+                <select id="cliff" name="cliff">
+                    <option value="west">West Cliff</option>
+                    <option value="north">North Cliff</option>
+                    <option value="east">East Cliff</option>
+                    <option value="south">South Cliff</option>
+                </select>
+                <br><br>
+
+                <label for="source">How did you hear about us:</label><br>
+                <textarea name="reason" rows="5" cols="30"></textarea><br><br>
+
+                <input type="submit" value="Inquire">
+            </fieldset>
+            </form>
+        </main>
+        <footer>
+            <div id="nondisclaimer">
+                <div class="copy">
+                    &copy; GreatCliffs.com
+                </div>
+                <div class="social">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                </div>
+            </div>
+            <div id="disclaimer">
+                <p>This website is designed and created solely for educational purposes only at Westcliff University. All contents are not intended for any commercial gain or use.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
