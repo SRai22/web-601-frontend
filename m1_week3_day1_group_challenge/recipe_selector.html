@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Recipe Selector - Lunch vs Dinner</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+</head>
+<body>
+    <div class="container">
+        <h1>Recipe Selector</h1>
+
+        <div class="buttons">
+            <button class="lunch-btn" onclick="showLunchRecipe()">Show Lunch Recipe</button>
+            <button class="dinner-btn" onclick="showDinnerRecipe()">Show Dinner Recipe</button>
+        </div>
+        
+        <div id="recipeDisplay">
+            <p>
+                Click a button above to display a recipe
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Variables
+        const lunchRecipe = {
+            name: "Grilled Hamburger",
+            steps: [
+                "Prepare burger patty by seasoning ground beef with salt and pepper",
+                "Grill patty on medium heat for 4-5 minutes per side",
+                "Toast bun while grilling meat until golden brown",
+                "Prepare toppings: slice tomatoes, lettuce, onions, and pickles",
+                "Assemble ingredients into hamburger when done - bun, patty, toppings"
+            ]
+        };
+
+        const dinnerRecipe = {
+            name: "Spaghetti Carbonara",
+            steps: [
+                "Boil salted water and cook spaghetti according to package directions",
+                "Cook bacon or pancetta in a large pan until crispy",
+                "Whisk eggs with grated Parmesan cheese and black pepper in a bowl",
+                "Drain pasta and immediately toss with hot bacon and rendered fat",
+                "Remove from heat and quickly stir in egg mixture to create creamy sauce"
+            ]
+        };
+
+        // Function to display lunch recipe
+        function showLunchRecipe() {
+            const recipeHTML = createRecipe(lunchRecipe, 'lunch');
+            document.getElementById('recipeDisplay').innerHTML = recipeHTML;
+        }
+
+        // Function to display dinner recipe
+        function showDinnerRecipe() {
+            const recipeHTML = createRecipe(dinnerRecipe, 'dinner');
+            document.getElementById('recipeDisplay').innerHTML = recipeHTML;
+        }
+
+        // Function to create HTML for recipe display
+        function createRecipe(recipe, type) {
+            var className; 
+            if (type === 'lunch') {
+                className = 'lunch-recipe';
+            } else {
+                className = 'dinner-recipe';
+            }
+
+            let stepsHTML = '<ol>';
+            recipe.steps.forEach(step => {
+                stepsHTML += `<li>${step}</li>`;
+            });
+            stepsHTML += '</ol>';
+            
+            return `
+                <div class="recipe ${className}">
+                    <h2> ${recipe.name} Recipe (${type.charAt(0).toUpperCase() + type.slice(1)})</h2>
+                    ${stepsHTML}
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
