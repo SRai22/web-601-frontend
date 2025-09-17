@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Essentials - Challenge 1</title>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Open+Sans:700,400);
+
+        .container {
+            width: 400px;
+            height: 400px;
+            margin:100px auto;
+            border-radius: 2px;
+            box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.55);
+            background: #512626;
+            color: #fff;
+            font-family: 'Open Sans', Helvetica, sans-serif;
+        }
+        .card {
+            box-sizing: border-box;
+            float: left;
+            width: 200px;
+            height: 200px;
+            background: #E27474;
+            cursor: pointer;
+            text-align: center;
+            padding-top: 55px;
+        }
+
+        .card:hover {
+            border: 3px solid #000;
+        }
+
+        .card:hover .day,
+        .card:hover .number {
+            transform: scale(0.95);
+            color: #123;
+            text-shadow: 1px 1px 2px rgba(255,255,255,0.5);
+        }
+
+        .day {
+            display: block;
+            line-height: 120%;
+        }
+        .number {
+            display: block;
+            font-weight: 700;
+            font-size: 60px;
+            line-height: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="cards">
+              <div class="card">
+                  <span class="day">Friday</span>
+                  <span class="number">15</span>
+              </div>
+              <div class="card">
+                  <span class="day">Saturday</span>
+                  <span class="number">16</span>
+              </div>
+              <div class="card">
+                  <span class="day">Sunday</span>
+                  <span class="number">17</span>
+              </div>
+              <div class="card">
+                  <span class="day">Monday</span>
+                  <span class="number">18</span>
+              </div>
+        </div>
+    </div>
+</body>
+</html>

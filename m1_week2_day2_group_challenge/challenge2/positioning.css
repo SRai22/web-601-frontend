@@ -1,0 +1,59 @@
+/* CSS */
+body {
+   margin: 0;
+   padding: 0;
+   font-size: 1.1em;
+   background-color: #94d7e3;
+}
+
+h1 {
+   font-family: Futura, Helvetica, Arial, 'sans-serif';
+   margin-top: 0;
+}
+h2 {
+   color: #d94444;
+}
+
+#wrapper {
+   margin: 80px auto;
+   padding: 10px 30px;
+   width: 500px;
+   background-color: white;
+   height: 100%;
+   border-left: 2px solid black;
+   border-right: 2px solid black;
+   position: relative;
+}
+
+#wrapper h2:first-child {
+   color: #000
+}
+
+img {
+   border: 2px solid black;
+   position: static;
+}
+
+img:last-of-type{
+   border: 1px solid black;
+   position: absolute;
+   right: 70px;
+   bottom: 350px;
+   transform: rotate(6deg);
+}
+
+p {
+   margin-top: 80px;
+}
+
+#feature {
+   background-color: #ffeb3b;
+   padding: 20px;
+   margin-top: 20px;
+   border: 2px solid black;
+}
+
+#feature h2 {
+   color: black;
+   margin-top: 0;
+}
