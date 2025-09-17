@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Recipe Selector - Time-Based Meals</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+</head>
+<body>
+    <div class="container">
+        <h1 id="mainHeading">Recipe Selector</h1>
+        <div id="recipeDisplay"></div>
+    </div>
+
+    <script>
+        // Variables
+        var currentDate = new Date();
+        var currentHour = currentDate.getHours();
+        var currentMinutes = currentDate.getMinutes();
+        var mealType = '';
+        var ampm = '';
+        var displayHour = 0;
+        
+        // Array to store all three recipes
+        var recipes = [
+            {
+                name: "Scrambled Eggs with Toast",
+                type: "breakfast",
+                steps: [
+                    "Crack 2-3 eggs into a bowl and whisk it well with salt and pepper",
+                    "Put butter in a non-stick pan over medium-low heat",
+                    "Pour eggs into pan and gently stir with a spatula",
+                    "Continue stirring until eggs are creamy and set",
+                    "Toast bread",
+                    "Serve scrambled eggs on top toast"
+                ]
+            },
+            {
+                name: "Grilled Hamburger",
+                type: "lunch",
+                steps: [
+                    "Prepare burger patty by seasoning ground beef with salt and pepper",
+                    "Grill patty on medium heat for 4-5 minutes per side",
+                    "Toast bun while grilling meat until golden brown",
+                    "Prepare toppings: slice tomatoes, lettuce, onions, and pickles",
+                    "Assemble ingredients into hamburger when done - bun, patty, toppings"
+                ]
+            },
+            {
+                name: "Spaghetti Carbonara",
+                type: "dinner",
+                steps: [
+                    "Boil salted water and cook spaghetti according to package directions",
+                    "Cook bacon or pancetta in a large pan until crispy",
+                    "Whisk eggs with grated Parmesan cheese and black pepper in a bowl",
+                    "Drain pasta and immediately toss with hot bacon and rendered fat",
+                    "Remove from heat and quickly stir in egg mixture to create creamy sauce"
+                ]
+            }
+        ];
+
+        // Convert 24-hour format to 12-hour format with AM/PM
+        if (currentHour == 0) {
+            displayHour = 12;
+            ampm = 'AM';
+        } else if (currentHour < 12) {
+            displayHour = currentHour;
+            ampm = 'AM';
+        } else if (currentHour == 12) {
+            displayHour = 12;
+            ampm = 'PM';
+        } else {
+            displayHour = currentHour - 12;
+            ampm = 'PM';
+        }
+
+        // Conditional statement to determine meal type based on current hour
+        if (currentHour > 6 && currentHour < 12) {
+            mealType = 'Breakfast';
+        } else if (currentHour >= 12 && currentHour < 18) {
+            mealType = 'Lunch';
+        } else if (currentHour >= 18 && currentHour < 22) {
+            mealType = 'Dinner';
+        } else {
+            mealType = 'Late Night Snack';
+        }
+
+        // Update main heading with meal type and current time
+        var mainHeading = document.getElementById('mainHeading');
+        var timeString = displayHour + ':';
+        if (currentMinutes < 10) {
+            timeString = timeString + '0' + currentMinutes;
+        } else {
+            timeString = timeString + currentMinutes;
+        }
+        timeString = timeString + ' ' + ampm;
+        mainHeading.innerHTML = "You should cook " + mealType + '. Its ' + timeString;
+
+        // Function to create HTML for recipe display
+        function createRecipeHTML(recipe) {
+            var stepsHTML = '<ol>';
+            
+            // Loop through recipe steps
+            for (var i = 0; i < recipe.steps.length; i++) {
+                stepsHTML += '<li>' + recipe.steps[i] + '</li>';
+            }
+            stepsHTML += '</ol>';
+
+            var recipeHTML = '<div class="recipe ' + recipe.type + '-recipe">' +
+                '<h2>' + recipe.name + ' (' + recipe.type.charAt(0).toUpperCase() + recipe.type.slice(1) + ')</h2>' +
+                stepsHTML +
+                '</div>';
+            
+            return recipeHTML;
+        }
+
+        // Display all recipes using a loop
+        function displayAllRecipes() {
+            var allRecipesHTML = '';
+            
+            // Loop through the recipes array
+            for (var j = 0; j < recipes.length; j++) {
+                allRecipesHTML += createRecipeHTML(recipes[j]);
+            }
+            
+            document.getElementById('recipeDisplay').innerHTML = allRecipesHTML;
+        }
+
+        displayAllRecipes();
+    </script>
+</body>
+</html>
