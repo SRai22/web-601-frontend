@@ -79,8 +79,79 @@ input[type="submit"] {
     width: 100px;
 }
 main #album #photo img {
-    width: 400px;
+    width: 640px;
 }
+
+#album {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#photo {
+    position: relative; 
+    margin-bottom: 30px;
+    display: inline-block; 
+}
+
+#photo img {
+    width: 100%;
+    max-width: 640px;
+    height: auto;
+    display: block;
+}
+
+.caption {
+    font-weight: bold;
+    color: #753a30;
+    margin: 10px 0 5px 0;
+    font-size: 16px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.description {
+    visibility: hidden; /* visibility for smoother transitions */
+    position: absolute; /* Fixed position relative to parent list item */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Perfect centering */
+    color: #000;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white overlay */
+    border-radius: 8px;
+    width: 80%;
+    max-width: 400px; 
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(2px); 
+}
+
+.description strong {
+    font-weight: bold;
+    font-size: 16px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+#photo:hover {
+    cursor: pointer; /* Turn mouse pointer to finger when hovering */
+}
+
+#photo:hover img {
+    filter: brightness(0.8);
+    transition: filter 0.3s ease;
+}
+
+#photo:hover .description {
+    visibility: visible;
+    animation: fadeIn 0.3s ease-in;
+}
+
 footer {
     height: 40px;
     background-color: rgb(129, 141, 179);
