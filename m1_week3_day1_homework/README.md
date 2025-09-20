@@ -10,4 +10,7 @@
 ![Activities Page](./images/outputs/actvities-page.png)
 
 ## Contact page 
-![Contact page](./images/outputs/contact-page-output.png)
+![Contact page](./images/outputs/contact-page-output.png) 
+
+## Clock added on the home page 
+![clock](./images/outputs/add-clock.png)
