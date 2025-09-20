@@ -73,6 +73,27 @@
         </footer>
     </div>
     <script>
+        // Function to determine if daylight saving time is in effect
+        function isDaylightSavingTime(date) {
+            var year = date.getFullYear();
+            
+            // DST in US: Second Sunday in March to First Sunday in November
+            var dlstStart = new Date(year, 2, 1); // March 1st
+            var dlstEnd = new Date(year, 10, 1);  // November 1st
+            
+            // Find second Sunday in March
+            var marchFirstSunday = 1 + (7 - dlstStart.getDay()) % 7;
+            var marchSecondSunday = marchFirstSunday + 7;
+            dlstStart.setDate(marchSecondSunday);
+            
+            // Find first Sunday in November
+            var novFirstSunday = 1 + (7 - dlstEnd.getDay()) % 7;
+            dlstEnd.setDate(novFirstSunday);
+
+            // Check if current date is between DST start and end
+            return date >= dlstStart && date < dlstEnd;
+        }
+
         function currentTime() {
             // Declare variables
             var d = new Date(); // Get current date
@@ -121,14 +142,20 @@
             }
 
             // Check which time zone based on the converted time difference
-            if (adjTimeDiff == 8) {
-                timeZone = "PT"; // Pacific Time
+            // Account for daylight saving time (DST)
+            var isDST = isDaylightSavingTime(d);
+            
+            // Adjust timezone detection for Daylight Saving Time
+            var dstOffset = isDST ? 1 : 0; // DST adds 1 hour difference
+            
+            if (adjTimeDiff == (8 - dstOffset)) {
+                timeZone = isDST ? "PDT" : "PST"; // Pacific Time
             } else if (adjTimeDiff == 7) {
-                timeZone = "MT"; // Mountain Time
-            } else if (adjTimeDiff == 6) {
-                timeZone = "CT"; // Central Time
-            } else if (adjTimeDiff == 5) {
-                timeZone = "ET"; // Eastern Time
+                timeZone = isDST ? "MDT" : "MST"; // Mountain Time
+            } else if (adjTimeDiff == (6 - dstOffset)) {
+                timeZone = isDST ? "CDT" : "CST"; // Central Time
+            } else if (adjTimeDiff == (5 - dstOffset)) {
+                timeZone = isDST ? "EDT" : "EST"; // Eastern Time
             } else {
                 timeZone = ""; // Unknown timezone or outside US timezones
             }
