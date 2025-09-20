@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Great Cliffs of California</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body id="home">
+    <div class="container">
+        <header>
+            <div class="main-header">
+                <div class="logo">
+                    <img src="images/logo.png" alt="Great Cliffs Logo" width="125">
+                </div>
+                <nav class="main-menu">
+                    <ul>
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="cliffs.html">Cliffs</a></li>
+                        <li><a href="activities.html">Activities</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <section id="timeofday">
+            <span> Your Current Local Time: </span>
+            <span id="clock"></span>
+        </section>
+        <main>
+            <h2>Introducing California's Greatest Cliffs</h2>
+            <h3>What is so unique about California cliffs?</h3>
+            <p>California cliffs are one of a kind in the United States where no cliffs are as magnificent and beautiful as them. And California is the only state that have cliffs that fronts all possible environments: sea, river, mountains and canyons. There are four such individual unique cliffs: West Cliff, North Cliff, East Cliff and South Cliff. All offer fantastic overlooking views, recreational areas, camping sites, wildlife watch spots and overnight cabins.</p>
+            <h3>Where are these cliffs?</h3>
+            <p>Located within a 100 mile radius from Irvine, California, they can be reached by roads easily. The closest cliff to Irvine is West Cliff, which is the most popular and most visited.</p>
+        </main>
+        <section>
+            <ul id="partners">
+                <li class="partner">
+                    <img src="images/partners/partner-bustour.png" alt="Partner Bus Tours">
+                </li>
+                <li class="partner">
+                    <img src="images/partners/partner-cabinrental.png" alt="Partner Cabin Rental">
+                </li>
+                <li class="partner">
+                    <img src="images/partners/partner-campingadv.png" alt="Partner Camping Adventure">
+                </li>
+                <li class="partner">
+                    <img src="images/partners/partner-collegetours.png" alt="Partner College Tours">
+                </li>
+                <li class="partner">
+                    <img src="images/partners/partner-rentalbike.png" alt="Partner Rental Bike">
+                </li>
+                <li class="partner">
+                    <img src="images/partners/partner-tourgroup.png" alt="Partner Tour Group">
+                </li>
+            </ul>
+        </section>
+        <footer>
+            <div id="nondisclaimer">
+                <div class="copy">
+                    &copy; GreatCliffs.com
+                </div>
+                <div class="social">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                </div>
+            </div>
+            <div id="disclaimer">
+                <p>This website is designed and created solely for educational purposes only at Westcliff University. All contents are not intended for any commercial gain or use.</p>
+            </div>
+        </footer>
+    </div>
+    <script>
+        // Function to determine if daylight saving time is in effect
+        function isDaylightSavingTime(date) {
+            var year = date.getFullYear();
+            
+            // DST in US: Second Sunday in March to First Sunday in November
+            var dlstStart = new Date(year, 2, 1); // March 1st
+            var dlstEnd = new Date(year, 10, 1);  // November 1st
+            
+            // Find second Sunday in March
+            var marchFirstSunday = 1 + (7 - dlstStart.getDay()) % 7;
+            var marchSecondSunday = marchFirstSunday + 7;
+            dlstStart.setDate(marchSecondSunday);
+            
+            // Find first Sunday in November
+            var novFirstSunday = 1 + (7 - dlstEnd.getDay()) % 7;
+            dlstEnd.setDate(novFirstSunday);
+
+            // Check if current date is between DST start and end
+            return date >= dlstStart && date < dlstEnd;
+        }
+
+        function currentTime() {
+            // Declare variables
+            var d = new Date(); // Get current date
+            var hr = d.getHours(); // Get current hours
+            var min = d.getMinutes(); // Get current minutes
+            var sec = d.getSeconds(); // Get current seconds
+            var ampm;
+
+            // New variables for timezone calculation
+            var utchr = d.getUTCHours(); // Get current Greenwich Mean Time (GMT)
+            var timeDiff; // Store time difference between GMT hour and Local hour
+            var adjTimeDiff; // Store time difference converted to positive number
+            var timeZone; // Store the 4 time zones (PT,MT,CT,ET)
+
+            // Add 0 to single digit numbers for seconds and minutes
+            if (sec < 10) {
+                sec = "0" + sec;
+            }
+            if (min < 10) {
+                min = "0" + min;
+            }
+
+            // Convert Greenwich Mean Time from military time to standard time
+            var gmtHour = utchr;
+            if (gmtHour == 0) {
+                gmtHour = 12;
+            } else if (gmtHour > 12) {
+                gmtHour = gmtHour - 12;
+            }
+
+            // Calculate time difference between GMT hour and local hour
+            var localHour = hr;
+            if (localHour == 0) {
+                localHour = 12;
+            } else if (localHour > 12) {
+                localHour = localHour - 12;
+            }
+            
+            timeDiff = gmtHour - localHour;
+
+            //Convert time difference, if negative, to positive (adjusted time difference)
+            if (timeDiff < 0) {
+                adjTimeDiff = timeDiff + 12;
+            } else {
+                adjTimeDiff = timeDiff;
+            }
+
+            // Check which time zone based on the converted time difference
+            // Account for daylight saving time (DST)
+            var isDST = isDaylightSavingTime(d);
+            
+            // Adjust timezone detection for Daylight Saving Time
+            var dstOffset = isDST ? 1 : 0; // DST adds 1 hour difference
+            
+            if (adjTimeDiff == (8 - dstOffset)) {
+                timeZone = isDST ? "PDT" : "PST"; // Pacific Time
+            } else if (adjTimeDiff == 7) {
+                timeZone = isDST ? "MDT" : "MST"; // Mountain Time
+            } else if (adjTimeDiff == (6 - dstOffset)) {
+                timeZone = isDST ? "CDT" : "CST"; // Central Time
+            } else if (adjTimeDiff == (5 - dstOffset)) {
+                timeZone = isDST ? "EDT" : "EST"; // Eastern Time
+            } else {
+                timeZone = ""; // Unknown timezone or outside US timezones
+            }
+
+            // Determine AM or PM string
+            if (hr == 12) {
+                ampm = "PM";
+            } else if (hr > 12) {
+                hr = hr - 12;
+                ampm = "PM";
+            } else {
+                ampm = "AM";
+            }
+
+            // Assemble time format to display
+            var time = hr + ":" + min + ":" + sec + " " + ampm;
+
+            if (timeZone != "") {
+                time = time + " " + timeZone;
+            }
+            // Display current local time and time zone on HTML element
+            document.getElementById("clock").innerText = time; // Display the time
+        }
+
+        // Run currentTime function every second
+        setInterval(currentTime, 1000);
+    </script>
+</body>
+</html>
