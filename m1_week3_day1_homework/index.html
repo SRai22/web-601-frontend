@@ -23,6 +23,10 @@
                 </nav>
             </div>
         </header>
+        <section id="timeofday">
+            <span> Your Current Local Time: </span>
+            <span id="clock"></span>
+        </section>
         <main>
             <h2>Introducing California's Greatest Cliffs</h2>
             <h3>What is so unique about California cliffs?</h3>
@@ -68,5 +72,41 @@
             </div>
         </footer>
     </div>
+    <script>
+        function currentTime() {
+            // Declare variables
+            var d = new Date(); // Get current date
+            var hr = d.getHours(); // Get current hours
+            var min = d.getMinutes(); // Get current minutes
+            var sec = d.getSeconds(); // Get current seconds
+            var ampm;
+
+            // Add 0 tp singele digit numbers for seconds and minutes
+            if (sec < 10) {
+                sec = "0" + sec;
+            }
+            if (min < 10) {
+                min = "0" + min;
+            }
+
+            // Determine AM or PM string
+            if (hr == 12) {
+                ampm = "PM";
+            } else if (hr > 12) {
+                hr = hr - 12;
+                ampm = "PM";
+            } else {
+                ampm = "AM";
+            }
+
+            // Assemble time format to display
+            var time = hr + ":" + min + ":" + sec + " " + ampm;
+            // Display current local time and time zone on HTML element
+            document.getElementById("clock").innerText = time; // Display the time
+        }
+
+        // Run currentTime function every second
+        setInterval(currentTime, 1000);
+    </script>
 </body>
 </html>
