@@ -135,8 +135,6 @@ document.addEventListener('DOMContentLoaded', function () {
     infoBox.style.visibility = 'visible';
     infoBox.classList.add('visible');
     document.body.classList.add('info-open');
-    // Focus close link for accessibility
-    document.getElementById('closeInfoLink').focus();
   }
 
   function hideInfoBox() {
