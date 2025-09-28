@@ -1,2 +1,4 @@
 # web-601-frontend
-Repo for all the coding projects for the Frontend Web development Course
+
+## Project Output
+![Project Output](m1_week2_day1_homework/images/output.png)
