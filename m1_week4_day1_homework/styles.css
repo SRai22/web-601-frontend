@@ -335,7 +335,7 @@ legend {
 }
 
 form .button input[type="submit"] {
-    background-color: #4977D1;
+    /* background-color: #4977D1; */
     color: #fff;
     padding: 10px 30px;
     border: none;
