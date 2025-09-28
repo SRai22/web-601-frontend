@@ -14,3 +14,6 @@
 
 ## Clock added on the home page 
 ![clock](./images/outputs/add-clock.png)
+
+## Random Code Generator
+![randomCode](./images/outputs/randomCode.png)
