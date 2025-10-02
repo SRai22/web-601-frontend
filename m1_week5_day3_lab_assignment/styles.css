@@ -425,15 +425,15 @@ form .button input[type="submit"]:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: white;
+    background-color: #3a3a3a;
     padding: 0;
     border: 3px solid #333;
     border-radius: 8px;
     box-shadow: 0 5px 25px rgba(0,0,0,0.7);
     display: none;
     z-index: 1001;
-    max-width: 80%;
-    max-height: 80%;
+    max-width: 90%;
+    max-height: 90%;
     overflow: hidden;
 }
 
@@ -451,11 +451,11 @@ form .button input[type="submit"]:hover {
 .box .image-container {
     padding: 20px;
     text-align: center;
-    background-color: white;
+    background-color: #3a3a3a;
 }
 
 .box img {
-    max-width: 100%;
+    max-width: 95%;
     max-height: 60vh;
     object-fit: contain;
     display: block;
@@ -465,12 +465,12 @@ form .button input[type="submit"]:hover {
 
 .close {
     position: absolute;
-    top: -15px;
-    right: -15px;
+    top: 5px;
+    right: 5px;
     width: 30px;
     height: 30px;
-    background-color: #000;
-    color: white;
+    background-color: #fff;
+    color: #000;
     border: 2px solid white;
     border-radius: 50%;
     font-size: 18px;
