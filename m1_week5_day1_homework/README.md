@@ -1,5 +1,8 @@
 # Week-2-homework-2
 
+## Jquery selection on Activities Page
+![jquery](./images/outputs/activities-selection.png)
+
 ## Project Output
 ![Project Output](./images/outputs/output.png)
 

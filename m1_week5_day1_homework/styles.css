@@ -558,7 +558,7 @@ form .button input[type="submit"]:hover {
 }
 
 .selectable.selected {
-    background-color: #28a745 !important;
+    background-color: #aebd29 !important;
     color: white !important;
     font-weight: bold;
 }
