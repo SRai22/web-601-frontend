@@ -35,7 +35,7 @@ $(document).ready(function() {
            $('#showfat').append('<td>' + data.fat3 + '</td>');
            $('#showfat').append('<td>' + data.fat4 + '</td>');
            
-           // Create vendor row (in footer)
+           // Create vendor row
            $('#showven').append('<td>' + data.subheadven + '</td>');
            $('#showven').append('<td>' + data.ven1 + '</td>');
            $('#showven').append('<td>' + data.ven2 + '</td>');
