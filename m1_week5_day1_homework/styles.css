@@ -1,0 +1,564 @@
+/* Header */
+header {
+    width: 100%; 
+    min-height: 400px;
+    padding-top: 3em;
+}
+
+#home header {
+    background: no-repeat url(images/cliff_ocean.jpg);
+    background-size: cover;
+}
+
+#cliffs header {
+    background: no-repeat lightgrey url(images/forest_cliff.jpg);
+    background-size: cover;
+}
+#activities header {
+    background: no-repeat lightgrey url(images/runfly.jpg);
+    background-size: cover;
+}
+#contact header {
+    background: no-repeat lightgrey url(images/cliff_rock.jpg);
+    background-size: cover;
+}
+/* Main Header */
+.main-header {
+    background-color: rgb(255, 255, 255, 0.8);
+    width: 800px;
+    margin: 2em auto 0 auto;
+    min-height: 100px;
+    height: 100px;
+}
+.main-header .logo img{
+    width: 100px;
+    height: 100px;
+    margin: 0 2em 0 0;
+    float: left;
+}
+/* Navigation Menu */
+.main-menu {
+    margin-left: 227px;
+    font-weight: 400;
+}
+.main-menu ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-left: 1px solid rgba(202, 204, 202, 0.6);
+    line-height: 100px;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.main-menu ul li a {
+    text-decoration: none;
+    color: #888;
+}
+.main-menu ul li a:hover {
+    color: #9ed034;
+}
+.main-menu ul li.active {
+    background: #9ed034;
+    border: none;
+}
+.main-menu ul li.active a {
+    color: #fff;
+}
+/* Main Content */
+main {
+    font-family: Arial, Helvetica, sans-serif;
+}
+main h2 {
+    color: #9ed034;
+    font-size: 32px;
+}
+/* Partners Section */
+section {
+    width: 100%;
+    background-color: #4288C3;
+}
+section #partners {
+    width: 1200px;
+    padding: 2em 0 2em 0;
+    margin: 0 auto;
+    text-align: center;
+}
+section #partners .partner {
+    display: inline-block;
+    margin: 0 0.75em; 
+    padding: 1.3em 1.5em;
+    background-color: #fff;
+    border-radius: 50%;
+}
+section #partners .partner img {
+    width: 90px;
+    height: 90px;
+}
+/* Footer */
+footer {
+    width: 100%;
+    height: 155px;
+    padding-bottom: 1em;
+    background-color: #ecfab8;
+}
+footer #nondisclaimer .copy{
+    padding: 3.5em 3.5em 3.5em 13em;
+    float: left;
+    font-size: 0.9em;
+}
+footer #nondisclaimer .social {
+    padding: 2.5em;
+    margin-right: 9.25em; 
+    float: right;
+}
+footer #disclaimer {
+    clear: both;
+}
+footer #disclaimer p {
+    font-size: 0.85em;
+    text-align: center;
+}
+footer #nondisclaimer .social .fa {
+    padding: 15px;
+    font-size: 15px;
+    width: 15px;
+    text-align: center;
+    text-decoration: none;
+    margin: 0 4px;
+    border-radius: 50%;
+}
+footer #nondisclaimer .social .fa:hover {
+    opacity: 0.7;
+}
+footer #nondisclaimer .social .fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+footer #nondisclaimer .social .fa-instagram {
+    background: #55ACEE;
+    color: white;
+}
+footer #nondisclaimer .social .fa-twitter {
+    background: #125688;
+    color: white;
+}
+
+/* Activities Table */
+table {
+    width: 1000px;
+    margin: 4em auto 0 auto;
+}
+
+caption {
+    background: #852B1B;
+    height: 40px;
+    color: white;
+    font-size: 1.3em;
+    font-weight: bold;
+    padding-top: 1em;
+}
+thead {
+    background: #BDE1FF;
+}
+tbody {
+    background: #EEFFE6;
+    text-align: center;
+}
+th,td {
+    width: 225px;
+    height: 75px;
+    vertical-align: middle;
+    border: solid 1px #852B1B;
+}
+th:first-child {
+    width: 125px;
+    height: 50px;
+    background: #4977D1;
+    color: #fff;
+}
+td:first-child {
+    font-weight: bold;
+    background: #BDE1FF;
+}
+
+#contact body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff;
+}
+
+#contact main h1 {
+    color: #9ed034;
+}
+
+#contact main p {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+.contactinfo {
+    margin-bottom: 30px;
+}
+
+.contactinfo div {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.contactinfo span:first-child {
+    font-weight: bold;
+    color: #333;
+}
+
+.contactinfo span:last-child {
+    color: #666;
+    margin-left: 5px;
+}
+
+fieldset {
+    border: 1px solid #9ed034;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #fefefe;
+    margin-bottom: 20px;
+}
+legend {
+    color: #4977D1;
+    font-weight: bold;
+    padding: 0 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.textbox {
+    margin-bottom: 20px;
+    padding-left: 1em;
+}
+
+.textbox label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #000;
+    font-size: 14px;
+}
+
+.textbox label:first-child {
+    margin-top: 5px;
+}
+
+.textbox input {
+    width: 50%;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+    background-color: white;
+}
+
+.radios {
+    margin-bottom: 20px;
+    padding-left: 1em;
+}
+
+.radios label:first-child {
+    font-weight: bold;
+    color: #000;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.radios input[type="radio"] {
+    margin-right: 5px;
+    margin-left: 15px;
+}
+
+/* Pseudo-class */
+.radios input[type="radio"]:first-of-type {
+    margin-left: 0;
+}
+
+.selectmenu {
+    margin-bottom: 20px;
+    padding-left: 1em;
+    display: flex;
+    align-items: center;
+}
+
+.selectmenu label {
+    margin-right: 15px;
+    margin-bottom: 0;
+    font-weight: bold;
+    color: #333;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.selectmenu select {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+    background-color: white;
+    min-width: 200px;
+}
+
+.commentbox {
+    margin-bottom: 20px;
+    padding-left: 1em;
+}
+
+.commentbox label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #000;
+    font-size: 14px;
+}
+
+.commentbox textarea {
+    width: 50%;
+    height: 120px;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    resize: vertical;
+    background-color: white;
+}
+
+.button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+form .button input[type="submit"] {
+    background-color: #4977D1;
+    color: #fff;
+    padding: 10px 30px;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Pseudo-class selector */
+form .button input[type="submit"]:hover {
+    background-color: #3a5fb8;
+}
+
+/* Cliffs Page */
+.cliffs-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 20px;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 50px;
+}
+
+.cliff-section {
+    border: 1px solid #fff;
+    aspect-ratio: 16/9;
+}
+
+.cliff-header {
+    background-color: #852B1B;
+    color: #fff;
+    text-align: center;
+    padding: 8px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.cliff-image {
+    width: 100%;
+    height: calc(100% - 40px);
+    object-fit: cover;
+    display: block;
+}
+
+/* Specific styling for each cliff */
+.west-cliff .cliff-header {
+    background-color: #852B1B;
+}
+
+.north-cliff .cliff-header {
+    background-color: #852B1B;
+}
+
+.east-cliff .cliff-header {
+    background-color: #852B1B;
+}
+
+.south-cliff .cliff-header {
+    background-color: #852B1B;
+}
+
+.lightbox-toggle {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.lightbox-toggle:hover {
+    transform: scale(1.05);
+}
+
+/* Lightbox Styles */
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+    display: none;
+    z-index: 1000;
+}
+
+.box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #3a3a3a;
+    padding: 0;
+    border: 3px solid #333;
+    border-radius: 8px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.7);
+    display: none;
+    z-index: 1001;
+    max-width: 90%;
+    max-height: 90%;
+    overflow: hidden;
+}
+
+.box .description {
+    background-color: #333;
+    /* background-color: #f8f8f8; */
+    padding: 15px 20px;
+    /* border-bottom: 1px solid #ddd; */
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.box .image-container {
+    padding: 20px;
+    text-align: center;
+    background-color: #3a3a3a;
+}
+
+.box img {
+    max-width: 95%;
+    max-height: 60vh;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    border-radius: 4px;
+}
+
+.close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    color: #000;
+    border: 2px solid white;
+    border-radius: 50%;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1003;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.close:hover {
+    background-color: #333;
+    transform: scale(1.1);
+}
+
+
+/* Time Display Section Styling */
+#timeofday {
+    background: linear-gradient(0deg, rgba(251,215,139,1) 0%, rgba(118,213,245,1) 100%);
+    padding: 20px 0;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+#timeofday span:first-child {
+    color: #3a3a3a;
+    font-size: 24px;
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+#timeofday #clock {
+    color: #125688;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+/* Random Code Section */
+.randomcode {
+    margin-bottom: 20px;
+    padding-left: 1em;
+}
+
+.code-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.code-container input[type="text"] {
+    width: 200px;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+    background-color: white;
+}
+
+.code-container #codes {
+    margin: 0;
+    padding: 8px 12px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    color: #333;
+    min-width: 120px;
+    text-align: center;
+}
+
+/* Activity Selection Styles */
+.selectable {
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.selectable:hover {
+    background-color: #d4edda !important;
+}
+
+.selectable.selected {
+    background-color: #28a745 !important;
+    color: white !important;
+    font-weight: bold;
+}
