@@ -1,0 +1,105 @@
+header {
+  /* Responsive background image that scales with viewport */
+  background: url(images/central_park.jpg) center / cover no-repeat;
+  /* Flexible height that adapts to different screen sizes */
+  min-height: clamp(220px, 30vh, 420px);
+  display: flex;
+  align-items: flex-start;  /* Position title at top */
+  padding: clamp(16px, 5vw, 100px);
+  color: #fff;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(55px, 5vw, 72px); /* Responsive font size */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Shadow for better readability */
+  line-height: 1.2;
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+/* For small screens below 600px allow normal wrapping*/
+@media (max-width: 599px) {
+  header {
+    white-space: normal; /* allow wrapping */
+    font-size: clamp(60px, 5vw, 72px);
+  }
+}
+
+li {
+  list-style-type: none;
+  display: inline;
+  padding: 0 20px;
+}
+
+li a {
+  text-decoration: none; /* Remove Underline */
+}
+
+li a:link {
+  color: #000; /* Before Click */
+}
+
+li a:visited {
+  color:#818db3; /* After Click */
+}
+
+li a:hover {
+  color:#333; /* Mouse Over */
+}
+
+li a:active {
+  color:#753a30; /* Mouse Down */
+}
+
+nav {
+  background-color:rgb(255, 245, 238);
+  height: 50px;
+  text-align: center;
+  padding-top: 2px;
+}
+
+main {
+  margin: 50px;
+}
+
+main h1 {
+  color:rgb(129, 141, 179);
+  font-family: arial;
+}
+
+main img {
+  width: 100%;
+  height: auto;
+}
+
+footer {
+  height: 40px;
+  background-color:rgb(129, 141, 179);
+  text-align: center;
+  padding-top: 20px;
+  color:rgb(211, 218, 240);
+}
+
+.card {
+  padding: 1rem;
+  width: 100%; /* Full width on mobile */
+}
+
+.cards {
+  max-width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 0.5rem;
+  /* Single column by default (mobile-first, stacks on small screens) */
+  grid-template-columns: 1fr;
+}
+
+/* Is the screen larger than 600 pixels? Make it two columns.*/
+@media (min-width: 600px) {
+  .cards { 
+    grid-template-columns: repeat(2, 1fr); 
+  }
+  
+  .card {
+    width: 100%; /* Let grid handle the width */
+  }
+}
