@@ -2,9 +2,9 @@
 
 Desktop view
 
-![Desktop view](images/desktop-view.png)
+![Desktop view](output/desktop-view.png)
 
 Mobile view
 
-![Mobile view](images/mobile-view.png)
+![Mobile view](output/mobile-view.png)
 
