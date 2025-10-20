@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Great Cliffs of California</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Bootstrap CSS (stable CDN) -->
@@ -54,73 +55,95 @@
             </div>
             </div>
         </header>
-        <main>
-            <h1>Contacting Us</h1>
-            <p>
-            You can drop by the visitors information center at the cliff site that you plan on visiting. They are open
-            7 days a week from 8.00AM to 5.00PM.<br> You can also contact us directly if you need additional information about 
-            the Cliffs, Hours of Operations, Facilities or questions about this site using one of the following:
-            </p>
-                
-            <div class="contactinfo">
-                <div class="phone">
-                    <span>Phone:</span>
-                    <span>(800)GCLIFFS</span>
-                </div>
-                <div class="email">
-                    <span>Email:</span>
-                    <span>info@greatcliffs.com</span>
+        <main class="container my-4 my-md-5">
+            <div class="row">
+                <div class="col-12 col-lg-10 col-xl-8 mx-auto">
+                    <h1 class="mb-4">Contacting Us</h1>
+                    <p class="mb-4">
+                        You can drop by the visitors information center at the cliff site that you plan on visiting. They are open
+                        7 days a week from 8.00AM to 5.00PM. You can also contact us directly if you need additional information about
+                        the Cliffs, Hours of Operations, Facilities or questions about this site using one of the following:
+                    </p>
+
+                    <div class="contactinfo mb-4">
+                        <div class="phone mb-2">
+                            <span class="fw-bold">Phone:</span>
+                            <span>(800)GCLIFFS</span>
+                        </div>
+                        <div class="email">
+                            <span class="fw-bold">Email:</span>
+                            <span>info@greatcliffs.com</span>
+                        </div>
+                    </div>
+
+                    <form action="/contact" method="post">
+                        <fieldset class="border rounded p-4">
+                            <legend class="float-none w-auto px-3">Contact Form</legend>
+
+                            <!-- Name, Email, Phone in responsive grid -->
+                            <div class="row g-3 mb-3">
+                                <div class="col-12 col-md-6">
+                                    <label for="name" class="form-label">Name:</label>
+                                    <input type="text" id="name" name="name" class="form-control" placeholder="John Doe">
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <label for="email" class="form-label">Email:</label>
+                                    <input type="email" id="email" name="email" class="form-control" placeholder="johndoe@gmail.com">
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <label for="phone" class="form-label">Phone:</label>
+                                    <input type="text" id="phone" name="phone" class="form-control" placeholder="xxx-xxx-xxxx">
+                                </div>
+                            </div>
+
+                            <!-- Radio buttons -->
+                            <div class="mb-3">
+                                <label class="form-label d-block">How should we contact you?</label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="contact" id="contactEmail" value="email" checked>
+                                    <label class="form-check-label" for="contactEmail">Email</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="contact" id="contactPhone" value="phone">
+                                    <label class="form-check-label" for="contactPhone">Phone</label>
+                                </div>
+                            </div>
+
+                            <!-- Select dropdown -->
+                            <div class="mb-3">
+                                <label for="cliffSelect" class="form-label">Which Cliff are you inquiring?</label>
+                                <select id="cliffSelect" class="form-select" style="max-width: 300px;">
+                                    <option>West Cliff</option>
+                                    <option>North Cliff</option>
+                                    <option>East Cliff</option>
+                                    <option>South Cliff</option>
+                                </select>
+                            </div>
+
+                            <!-- Textarea -->
+                            <div class="mb-3">
+                                <label for="comments" class="form-label">How did you hear about us:</label>
+                                <textarea id="comments" class="form-control" rows="4"></textarea>
+                            </div>
+
+                            <!-- Random Codes -->
+                            <div class="mb-3">
+                                <div class="d-flex flex-sm-row align-items-start align-items-sm-center gap-3">
+                                    <input type="text" name="randomcode" id="code_entered" class="form-control" style="max-width: 250px;" placeholder="Enter characters" onblur="evaluateCode()">
+                                    <p id="codes" class="mb-0 p-2 bg-light border rounded" style="min-width: 120px; text-align: center;"></p>
+                                </div>
+                            </div>
+                            <!-- Submit button -->
+                            <div class="text-center mt-4">
+                                <button type="submit" id="submit" class="btn btn-primary btn-lg">
+                                    <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                                    &nbsp;Send
+                                </button>
+                            </div>
+                        </fieldset>
+                    </form>
                 </div>
             </div>
-
-            <form action="/contact" method="post">  
-            <fieldset>  
-                <legend>Contact Form</legend>
-                <div class="textbox">
-                    <label>Name:</label> 
-                    <input type="text" name="name" placeholder="John Doe">  
-                    <label>Email:</label>  
-                    <input type="email" name="email" placeholder="johndoe@gmail.com"> 
-                    <label>Phone:</label>
-                    <input type="text" name="phone" placeholder="xxx-xxx-xxxx"> 
-                </div>
-                
-                <div class="radios">
-                    <label>How should we contact you?</label>  
-                    <input type="radio" name="contact" value="email" checked>Email 
-                    <input type="radio" name="contact" value="phone">Phone
-                </div>
-
-                <div class="selectmenu">
-                    <label>Which Cliff are you inquiring?</label>  
-                    <select>
-                        <option>West Cliff</option>
-                        <option>North Cliff</option>
-                        <option>East Cliff</option>
-                        <option>South Cliff</option>
-                    </select>
-                </div>
-                
-                <div class="commentbox">
-                    <label>How did you hear about us:</label>  
-                    <textarea></textarea>
-                </div>
-                <!-- Random Codes -->
-                 <div class="randomcode">
-                    <div class="code-container">
-                    <input type="text" name="randomcode" id="code_entered" placeholder="Enter characters" onblur="evaluateCode()">
-                    <p id="codes"></p>
-                    </div>
-                 </div>
-
-                <div class="button">
-                    <button type="submit" id="submit" class="btn btn-primary">
-                        <i class="fa fa-paper-plane" aria-hidden="true"></i>
-                        &nbsp;send
-                    </button>
-                </div>
-            </fieldset>  
-            </form>
         </main>
         <section class="partners-band py-5">
             <div class="container">
