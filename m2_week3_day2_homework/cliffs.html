@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Great Cliffs of California</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body id="cliffs">
+    <div class="container">
+        <div class="hero-bg cliffs"></div>
+        <header class="hero d-flex align-items-start sticky-top">
+            <div class="main-header shadow-sm">
+            <div class="container-fluid px-3">
+                <nav class="navbar navbar-expand-lg py-0">
+                <!-- Logo -->
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img src="images/logo.png" alt="Great Cliffs Logo" width="100" height="100" />
+                </a>
+
+                <!-- Hamburger -->
+                <button
+                    class="navbar-toggler ms-auto me-2"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainNav"
+                    aria-controls="mainNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Nav links -->
+                <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+                    <ul class="navbar-nav text-uppercase">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="cliffs.html">Cliffs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="activities.html">Activities</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    </ul>
+                </div>
+                </nav>
+            </div>
+            </div>
+        </header>
+        <main>
+            <h2>California's Greatest Cliffs</h2>
+            <p>The greatest cliffs are these four cliffs located in southern California. Each of these cliffs have their own uniqueness and beauty: West Cliff, North Cliff, East Cliff and South Cliff are the pride of California. <br>
+                Each cliff has many amenities to offer visitors such as recreational areas, camping sites, wildlife watch spots and overnight cabins. <br>
+            </p>
+            <p> No matter which direction you head from Irvine, California, the sites are easily reached within a 100 mile radius. West Cliff is the most popular among Westcliff University campus students because of its close proximity.
+            </p>
+
+            <div class="cliffs-grid">
+                <div class="cliff-section west-cliff">
+                    <div class="cliff-header">West Cliff</div>
+                    <div class="lightbox-toggle" data-cliff="West Cliff"></div>
+                </div>
+
+                <div class="cliff-section north-cliff">
+                    <div class="cliff-header">North Cliff</div>
+                    <div class="lightbox-toggle" data-cliff="North Cliff"></div>
+                </div>
+
+                <div class="cliff-section east-cliff">
+                    <div class="cliff-header">East Cliff</div>
+                    <div class="lightbox-toggle" data-cliff="East Cliff"></div>
+                </div>
+
+                <div class="cliff-section south-cliff">
+                    <div class="cliff-header">South Cliff</div>
+                    <div class="lightbox-toggle" data-cliff="South Cliff"></div>
+                </div>
+            </div>
+        </main>
+        
+        <!-- Lightbox Structure -->
+        <div class="backdrop"></div>
+        <div class="box">
+            <div class="close">×</div>
+        </div>
+
+        <section class="partners-band py-5">
+            <div class="container">
+                <ul id="partners" class="list-unstyled d-flex flex-wrap justify-content-center gap-4"></ul>
+            </div>
+        </section>
+        <footer>
+        <div id="nondisclaimer" class="container py-4">
+          <div class="row align-items-center">
+            <div class="col-12 col-lg-6 text-center text-lg-start small">
+              © Copyright 2021 :: GreatCliffs.com
+            </div>
+            <div class="col-12 col-lg-6 mt-3 mt-lg-0">
+              <div class="d-flex justify-content-center justify-content-lg-end gap-2">
+                <a href="#" class="fa fa-facebook social-icn" aria-label="Facebook"></a>
+                <a href="#" class="fa fa-instagram social-icn" aria-label="Instagram"></a>
+                <a href="#" class="fa fa-twitter social-icn" aria-label="Twitter"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="disclaimer" class="py-3">
+          <p class="mb-0 small text-center">
+            This website is designed and created solely for educational purposes
+            only at Westcliff University. All contents are not intended for any
+            commercial gain or use.
+          </p>
+        </div>
+      </footer>
+    </div>
+    <!-- Partners -->
+    <script src="js/site_scripts.js"></script>
+    <!-- Bootstrap JS Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
