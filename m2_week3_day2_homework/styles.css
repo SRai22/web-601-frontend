@@ -526,41 +526,79 @@ footer #nondisclaimer .social .fa-instagram {
 }
 
 /* Activities Table */
-table {
-    width: 1000px;
-    margin: 4em auto 0 auto;
+#activities table {
+    min-width: 800px; /* Minimum width to maintain table structure */
+    margin: 0 auto;
 }
 
-caption {
+/* Override Bootstrap caption styling to match original design */
+#activities caption {
     background: #852B1B;
-    height: 40px;
     color: white;
     font-size: 1.3em;
     font-weight: bold;
-    padding-top: 1em;
+    padding: 0.75em 1em;
+    caption-side: top;
 }
-thead {
+
+#activities thead {
     background: #BDE1FF;
 }
-tbody {
+
+#activities tbody {
     background: #EEFFE6;
     text-align: center;
 }
-th,td {
-    width: 225px;
+
+#activities th,
+#activities td {
+    min-width: 150px; /* Changed from fixed width to min-width for responsiveness */
     height: 75px;
     vertical-align: middle;
-    border: solid 1px #852B1B;
 }
-th:first-child {
-    width: 125px;
+
+#activities th:first-child,
+#activities td:first-child {
+    min-width: 125px;
+    font-weight: bold;
+}
+
+#activities th:first-child {
     height: 50px;
-    background: #4977D1;
+    background: #4977D1; /* Override Bootstrap's table-light */
     color: #fff;
 }
-td:first-child {
-    font-weight: bold;
+
+#activities td:first-child {
     background: #BDE1FF;
+}
+
+/* Ensure table borders match original styling */
+#activities .table-bordered > :not(caption) > * > * {
+    border-color: #852B1B;
+}
+
+/* Disable Bootstrap's row hover effect - we only want cell selection */
+#activities .table-hover tbody tr:hover {
+    background-color: inherit !important;
+}
+
+/* Cell selection styles - used by JavaScript */
+#activities tbody td {
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+/* Highlighted/selected cell style (added by JavaScript) */
+#activities tbody td.tdhighlight {
+    background-color: #aebd29 !important;
+    color: white !important;
+    font-weight: bold;
+}
+
+/* Prevent first column cells from being clickable (activity names) */
+#activities tbody td:first-child {
+    cursor: default;
 }
 
 #contact body {

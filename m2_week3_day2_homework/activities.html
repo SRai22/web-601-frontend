@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Great Cliffs of California</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles.css">
@@ -55,71 +56,80 @@
             </div>
             </div>
         </header>
-        <main>
-            <h1>Activities</h1>
-            <p>There are many planned activities at all the cliff sites. Some are scheduled daily, weekly, monthly and yearly. <br>
-                These activities are not however run by the state park and recreational department. They are operated and manage by private vendors but are partners with the state department. <br>
-                Therefore, for schedule inquiries or information, please contact them directly. For a list of activities, please refer to the table below:</p>
+        <main class="container my-4 my-md-5">
+            <div class="row">
+                <div class="col-12 col-xl-11 mx-auto">
+                    <h1 class="mb-4">Activities</h1>
+                    <p class="mb-4">
+                        There are many planned activities at all the cliff sites. Some are scheduled daily, weekly, monthly and yearly.
+                        These activities are not however run by the state park and recreational department. They are operated and managed by private vendors but are partners with the state department.
+                        Therefore, for schedule inquiries or information, please contact them directly. For a list of activities, please refer to the table below:
+                    </p>
 
-            <table>
-                <caption>Activities at the Cliffs</caption>
-                <thead>
-                    <tr>
-                        <th>Activity</th>
-                        <th>West Cliff</th>
-                        <th>North Cliff</th>
-                        <th>East Cliff</th>
-                        <th>South Cliff</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Hiking</td>
-                        <td>Kayak</td>
-                        <td>Skydiving</td>
-                        <td>Biking</td>
-                        <td>Camping</td>
-                    </tr>
-                    <tr>
-                        <td>College Hikes</td>
-                        <td>Western Kayak Meetup</td>
-                        <td>Seacliff Diving</td>
-                        <td>Bicycle for One</td>
-                        <td>Youth Camp</td>
-                    </tr>
-                    <tr>
-                        <td>Family Fun</td>
-                        <td>Not available</td>
-                        <td>Sky is the limit</td>
-                        <td>Not available</td>
-                        <td>Rent a Tent</td>
-                    </tr>
-                    <tr>
-                        <td>Treasure Trails</td>
-                        <td>Youth Kayaking</td>
-                        <td>Not Available</td>
-                        <td>Bike Meetup Group</td>
-                        <td>Campground Adventure</td>
-                    </tr>
-                    <tr>
-                        <td>Canyon Explorer</td>
-                        <td>Kayak Down</td>
-                        <td>Sky Diving for Beginners</td>
-                        <td>Not Available</td>
-                        <td>Sunset Camping</td>
-                    </tr>
-                </tbody>
-            </table>
-            <div id="displaySelected">
-                <div id="result">
-                    <h4>My selected activities to enquire:</h4>
-                </div> 
-                <div id="sendinfo">
-                    <input type="email" placeholder="johndoe@gmail.com">
-                    <button>Get Info</button>
+                    <!-- Responsive table wrapper with horizontal scroll on small screens -->
+                    <div class="table-responsive mb-4">
+                        <table class="table table-bordered table-hover">
+                            <caption class="caption-top">Activities at the Cliffs</caption>
+                            <thead class="table-light">
+                                <tr>
+                                    <th scope="col">Activity</th>
+                                    <th scope="col">West Cliff</th>
+                                    <th scope="col">North Cliff</th>
+                                    <th scope="col">East Cliff</th>
+                                    <th scope="col">South Cliff</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Hiking</td>
+                                    <td>Kayak</td>
+                                    <td>Skydiving</td>
+                                    <td>Biking</td>
+                                    <td>Camping</td>
+                                </tr>
+                                <tr>
+                                    <td>College Hikes</td>
+                                    <td>Western Kayak Meetup</td>
+                                    <td>Seacliff Diving</td>
+                                    <td>Bicycle for One</td>
+                                    <td>Youth Camp</td>
+                                </tr>
+                                <tr>
+                                    <td>Family Fun</td>
+                                    <td>Not available</td>
+                                    <td>Sky is the limit</td>
+                                    <td>Not available</td>
+                                    <td>Rent a Tent</td>
+                                </tr>
+                                <tr>
+                                    <td>Treasure Trails</td>
+                                    <td>Youth Kayaking</td>
+                                    <td>Not Available</td>
+                                    <td>Bike Meetup Group</td>
+                                    <td>Campground Adventure</td>
+                                </tr>
+                                <tr>
+                                    <td>Canyon Explorer</td>
+                                    <td>Kayak Down</td>
+                                    <td>Sky Diving for Beginners</td>
+                                    <td>Not Available</td>
+                                    <td>Sunset Camping</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div id="displaySelected" class="mb-4">
+                        <div id="result">
+                            <h4>My selected activities to enquire:</h4>
+                        </div>
+                        <div id="sendinfo">
+                            <input type="email" class="form-control" placeholder="johndoe@gmail.com">
+                            <button class="btn btn-primary">Get Info</button>
+                        </div>
+                    </div>
                 </div>
             </div>
-
         </main>
         <section class="partners-band py-5">
             <div class="container">
@@ -151,6 +161,8 @@
         </div>
       </footer>
     </div>
+    <!-- Bootstrap JS Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Partners -->
     <script src="js/site_scripts.js"></script>
     <script src="js/activities.js"></script>
