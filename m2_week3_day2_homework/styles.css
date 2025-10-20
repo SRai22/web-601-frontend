@@ -982,51 +982,57 @@ form .button input[type="submit"]:hover {
     font-weight: bold;
 }
 
-#activities main #displaySelected {
-    visibility: hidden;
-    margin: 0 auto;
-    width: 600px;
-    border: 2px solid #9ed034;
-    padding: 0.75em;
-}
-
-#activities main #displaySelected #result,
-#activities main #displaySelected #sendinfo {
-    display: inline-block;
-    margin: 0;
-}
-
-#activities main #result {
-    min-height: 50px;
-    width: 300px;
-    padding: 0;
-}
-
-#activities main #result h4 {
-    margin-bottom: 1em;
-    font-size: 1.15em;
-}
-
-#activities main #result p {
+/* Modal Styles for Selected Activities */
+#activitiesModal .modal-header {
     background-color: #f8f9fa;
-    padding: 8px 12px;
-    margin: 8px 0;
-    font-size: 15px;
+    border-bottom: 2px solid #9ed034;
+}
+
+#activitiesModal .modal-title {
+    color: #9ed034;
+    font-weight: bold;
+}
+
+#activitiesModal #result {
+    min-height: 50px;
+}
+
+#activitiesModal #result p {
+    background-color: #f8f9fa;
+    padding: 10px 15px;
+    margin: 10px 0;
+    font-size: 16px;
     color: #333;
-    line-height: 1.4;
+    line-height: 1.5;
     border: 1px solid #dee2e6;
     border-radius: 4px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-#activities main #result p .cliff-site {
+#activitiesModal #result p .cliff-site {
     background-color: #bde1ff;
-    padding: 2px 6px;
+    padding: 3px 8px;
     border-radius: 3px;
     font-weight: bold;
     color: #125688;
 }
 
-#activities main #displaySelected #sendinfo input[type="email"] {
-    width: 200px;
+#activitiesModal .modal-footer {
+    border-top: 1px solid #dee2e6;
+    gap: 15px;
+}
+
+#activitiesModal .btn-success {
+    background-color: #9ed034;
+    border-color: #9ed034;
+    min-width: 150px;
+}
+
+#activitiesModal .btn-success:hover {
+    background-color: #8bc028;
+    border-color: #8bc028;
+}
+
+#activitiesModal .btn-primary {
+    min-width: 150px;
 }

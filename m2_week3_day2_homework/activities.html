@@ -119,13 +119,24 @@
                         </table>
                     </div>
 
-                    <div id="displaySelected" class="mb-4">
-                        <div id="result">
-                            <h4>My selected activities to enquire:</h4>
-                        </div>
-                        <div id="sendinfo">
-                            <input type="email" class="form-control" placeholder="johndoe@gmail.com">
-                            <button class="btn btn-primary">Get Info</button>
+                    <!-- Bootstrap Modal for Selected Activities -->
+                    <div class="modal fade" id="activitiesModal" tabindex="-1" aria-labelledby="activitiesModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="activitiesModalLabel">My selected activities to enquire:</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div id="result">
+                                        <!-- Selected activities will be added here by JavaScript -->
+                                    </div>
+                                </div>
+                                <div class="modal-footer justify-content-center">
+                                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Back to Activities</button>
+                                    <button type="button" class="btn btn-primary" id="getInfoBtn">Get Info</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
