@@ -12,8 +12,11 @@
 </head>
 <body id="home">
     <div class="container">
-        <header class="hero d-flex align-items-start">
-        <div class="main-header shadow-sm">
+  <!-- Hero background image separate from sticky header so the image scrolls up -->
+  <div class="hero-bg home"></div>
+        <!-- Make the header sticky using Bootstrap's sticky-top -->
+        <header class="hero d-flex align-items-start sticky-top">
+          <div class="main-header shadow-sm">
           <div class="container-fluid px-3">
             <nav class="navbar navbar-expand-lg py-0">
               <!-- Logo -->
@@ -54,7 +57,7 @@
             </nav>
           </div>
         </div>
-      </header>
+    </header>
         <section id="timeofday">
             <span> Your Current Local Time: </span>
             <span id="clock"></span>

@@ -1,55 +1,62 @@
-/* Header */
+/* Header (sticky) */
 header {
-    width: 100%; 
-    min-height: 400px;
-    padding-top: 3em;
+    width: 100%;
+    min-height: 70px;
 }
 
-#home header {
-    background: no-repeat url(images/cliff_ocean.jpg);
-    background-size: cover;
+/* Hero background area that scrolls away */
+.hero-bg {
+    width: 100%;
+    height: 400px; /* original visual height for the hero image */
+    background-repeat: no-repeat;
+    background-size: 100% 400px;
 }
 
-#cliffs header {
-    background: no-repeat lightgrey url(images/forest_cliff.jpg);
-    background-size: cover;
+/* Page-specific hero backgrounds */
+.hero-bg.home {
+    background-image: url(images/cliff_ocean.jpg);
 }
-#activities header {
-    background: no-repeat lightgrey url(images/runfly.jpg);
-    background-size: cover;
+
+.hero-bg.cliffs {
+    background-image: url(images/forest_cliff.jpg);
 }
-#contact header {
-    background: no-repeat lightgrey url(images/cliff_rock.jpg);
-    background-size: cover;
+
+.hero-bg.activities {
+    background-image: url(images/runfly.jpg);
 }
+
+.hero-bg.contact {
+    background-image: url(images/cliff_rock.jpg);
+}
+
 /* Main Header */
 .main-header {
-    background-color: rgb(255, 255, 255, 0.8);
-    width: 800px;
-    margin: 2em auto 0 auto;
+    background-color: rgba(38, 41, 61, 0.7);
+    width: 760px;
+    margin: -400px auto;
     min-height: 100px;
     height: 100px;
+    border-radius: .25rem;
     position: relative;
-}
-
-.main-header {
-  background-color: rgba(255, 255, 255, 0.8);
-  width: 700px;
-  margin: 2em auto 0 auto;
-  min-height: 100px;
-  height: 100px;
-  border-radius: .25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1025;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
 }
 
 /* Let the bar be fluid on small screens */
 @media (max-width: 991.98px) {
-  .main-header {
-    width: calc(100% - 2.5rem);
-    margin-left: auto;
-    margin-right: auto;
-    height: auto;
-    min-height: 100px;
-  }
+    .main-header {
+        width: calc(100% - 2.5rem);
+        margin-left: auto;
+        margin-right: auto;
+        height: auto;
+        min-height: 60px;
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+    }
 }
 
 /* Navbar content container */
@@ -75,16 +82,17 @@ header {
   border: 0;
 }
 .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0,.6)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    /* ensure toggler is visible on dark bg */
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
 /* Link look */
 .navbar-nav .nav-link {
-  color: #888;
-  font-size: 14px;
-  padding: 1.3rem 1.5rem; /* gives the block feel similar to screenshots */
-  line-height: 1;
-  border-left: 1px solid rgba(202, 204, 202, 0.6);
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    /* padding: 1.3rem 1.5rem; */
+    line-height: 1;
+    border-left: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 /* Remove left border on the first link when horizontal */
@@ -109,17 +117,17 @@ header {
 
 /* Make collapsed menu items full-width blocks, like the screenshots */
 @media (max-width: 991.98px) {
-  .navbar-collapse {
-    background: rgba(255,255,255,0.95);
-    margin-top: .5rem;
-    border: 1px solid rgba(0,0,0,0.08);
-  }
+    .navbar-collapse {
+        background: rgba(38, 41, 61, 0.95); /* dark collapsed menu */
+        margin-top: .5rem;
+        border: 1px solid rgba(255,255,255,0.06);
+    }
   .navbar-nav .nav-link {
-    display: block;
-    width: 100%;
-    border-left: none;
-    border-bottom: 1px solid rgba(202, 204, 202, 0.6);
-    padding: 1.25rem 1.25rem;
+        display: block;
+        width: 100%;
+        border-left: none;
+        border-bottom: 1px solid rgba(255,255,255,0.06);
+        padding: 1.25rem 1.25rem;
   }
   .navbar-nav .nav-item:last-child .nav-link {
     border-bottom: none;
@@ -311,26 +319,89 @@ section #partners .partner img {
     height: 90px;
 }
 
-/* Footer */
+/* Footer: desktop/default behavior (keep previous large-screen layout) */
 footer {
-  width: 100%;
-  background-color: #ecfab8;
+    width: 100%;
+    background-color: #ecfab8; /* full-width light green */
 }
-#disclaimer {
-  background: transparent; /* keep same strip color as footer */
-}
+
 .social-icn {
-  padding: 15px;
-  font-size: 15px;
-  width: 15px;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 50%;
-  color: #fff;
+    /* desktop default: small inline icon appearance (original look) */
+    padding: 20px;
+    font-size: 15px;
+    width: 15px;
+    text-align: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 50%;
+    color: #fff;
 }
 .fa-facebook { background: #3B5998; }
 .fa-instagram { background: #125688; }
 .fa-twitter { background: #55ACEE; }
+
+/* Mobile-only footer adjustments: stacked layout with white icon band */
+@media (max-width: 991.98px) {
+    #nondisclaimer .row {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 1.5rem 0 0.5rem 0; /* less bottom padding so white band sits close */
+    }
+
+    #nondisclaimer .col-12:first-child {
+        width: 100%;
+        text-align: center !important;
+        font-size: 1.05rem;
+        color: #111;
+    }
+
+    /* White band that holds circular social icons */
+    #nondisclaimer .row > .col-12:last-child .d-flex {
+        background: #ffffff;
+        padding: 1.25rem 0.75rem;
+        border-radius: 8px;
+        justify-content: center !important;
+        gap: 1.25rem;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+        max-width: 480px;
+        margin: 0.25rem auto 0 auto;
+    }
+
+    .social-icn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 56px;
+        height: 56px;
+        font-size: 18px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 50%;
+        color: #fff;
+        transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+    .social-icn:hover {
+        transform: translateY(-4px) scale(1.05);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+    }
+
+    /* Disclaimer band: provide comfortable padding and center text */
+    #disclaimer {
+        padding: 1.5rem 0 2rem 0;
+    }
+
+    #disclaimer p {
+        margin: 0;
+        text-align: center;
+        max-width: 1100px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 1.05rem;
+        color: #111;
+    }
+}
 
 /* footer {
     width: 100%;
